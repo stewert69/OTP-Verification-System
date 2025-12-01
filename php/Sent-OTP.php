@@ -21,7 +21,7 @@ $email = $_SESSION['Email'];
 $search_query = "SELECT * FROM `otp` WHERE Email = '$email'";
 $search_result = mysqli_query($conn, $search_query);
 $otp_row = mysqli_fetch_assoc($search_result);
-$otp = $otp_row['code'];
+$otp = $otp_row['passcode'];
 
 try {
   // Create a new PHPMailer object and configure it to use SMTP
